@@ -43,3 +43,25 @@ function Food(foo) {
 export default App
 ```
 + 위 방식은 비효율적 
+### 4. Food 컴포넌트 음식 이미지 출력
+```jsx 
+function App() {
+  return (
+    <div>
+      {
+        foodLike.map(dish => (<Food name={dish.name} picture={dish.image} />))
+      }
+    </div>
+  )
+}
+
+function Food({name, picture}) {
+  return (
+    <div>
+      <h2>I like {name}</h2>
+      <img src={picture} />
+  </div>
+  )
+}
+export default App
+```
