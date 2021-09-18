@@ -65,3 +65,8 @@ function Food({name, picture}) {
 }
 export default App
 ```
+### 5. map 함수 사용
++ 딕셔너리 안 정보찾기 가능
+```jsx
+foodLike.map (원하는이름 =>( ))
+```
