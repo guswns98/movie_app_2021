@@ -1,4 +1,24 @@
 # 강현준 201840203
+## [09월29일]
+### 1. prop types
++ prop types 설치
+  - npm install prop-types
++ prop types 사용
+  - import PropTypes from 'prop-types'추가
++ 평점 추가 rating
+  - number 타입 
+### 2. State,클래스형 컴포넌트 
+- State는 동적인 데이터 
+- props는 정적인 데이터
+- states는 클래스형에서 사용
+
+
+
+
+
+
+
+# 강현준 201840203
 ## [09월15일]
 ### 1. props 컴포넌트 사용
 + 컴포넌트에서 컴포넌트로 전달하는 데이터 (함수의 매개변수 역할)
