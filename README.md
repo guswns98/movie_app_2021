@@ -11,7 +11,25 @@
 - State는 동적인 데이터 
 - props는 정적인 데이터
 - states는 클래스형에서 사용
-
+- state 
+  - class형 컴포넌트 안에 state 기입
+  - state에 count 추가 
+### 3. render 함수
++ 직접 실행하지 않아도 자동으로 실행되는 함수
++ 클래스형 컴포넌트는 render() 함수가 JSX를 반환
+```jsx
+class App extends Component {
+    render() {
+        return (
+            <h1>Hello</h1>
+        )
+    }
+}
+```
+### 4. constructor()함수
++ state 값을 초기화하거나 메서드를 바인딩할 때 사용
++ 생성자 내에서 외부 API 직접 호출 불가능 
+  - componentDidMount() 사용하면 호출 가능
 
 
 
