@@ -21,7 +21,7 @@
 class App extends Component {
     render() {
         return (
-            <h1>Hello</h1>
+            <h1>Hi</h1>
         )
     }
 }
@@ -30,6 +30,22 @@ class App extends Component {
 + state 값을 초기화하거나 메서드를 바인딩할 때 사용
 + 생성자 내에서 외부 API 직접 호출 불가능 
   - componentDidMount() 사용하면 호출 가능
+
+### 5. add,minus 함수
+
+```jsx
+    add = () => {
+        this.setState(current => 
+        ({count: current.count +1
+        }))
+    }
+
+    minus = () => {
+        this.setState(current => 
+        ({count: current.count -1
+        }))
+    }
+```
 
 
 
