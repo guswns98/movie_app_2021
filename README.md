@@ -37,6 +37,8 @@ export default App
 ```jsx
 import axios from "axios"
 ```
+![12](https://user-images.githubusercontent.com/79896103/136647370-1c70ca02-184f-4c66-8b63-ece0270b0605.PNG)
+
 
 # 강현준 201840203
 ## [09월29일]
