@@ -37,6 +37,7 @@ export default App
 ```jsx
 import axios from "axios"
 ```
+<<<<<<< HEAD
 + axios로 API 호출
   - axios 동작확인 
 ### 3. async 
@@ -53,6 +54,9 @@ import axios from "axios"
 + getMovies()에 async 붙임, axios.get()에 await 붙임
 + async는 js에게 getMovies() 함수가 비동기라고 알려줌
 + await는 getMovies()함수 내부의 axios.get()의 실행 완료를       기다렸다가 끝나고 진행하라고 알려줌
+=======
+![12](https://user-images.githubusercontent.com/79896103/136647370-1c70ca02-184f-4c66-8b63-ece0270b0605.PNG)
+>>>>>>> 7e56a0312a4f49e7e08b3d4a171ccaeedb721af9
 
 
 # 강현준 201840203
