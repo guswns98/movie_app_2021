@@ -43,7 +43,8 @@ import axios from "axios"
 + axios로 API 호출
 
   - axios 동작확인
-  ![12](https://user-images.githubusercontent.com/79896103/136647370-1c70ca02-184f-4c66-8b63-ece0270b0605.PNG)
+  -  ![12](https://user-images.githubusercontent.com/79896103/136647370-1c70ca02-184f-4c66-8b63-ece0270b0605.PNG)
+ 
 
 
 
