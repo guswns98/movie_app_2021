@@ -37,6 +37,23 @@ export default App
 ```jsx
 import axios from "axios"
 ```
++ axios로 API 호출
+  - axios 동작확인 
+### 3. async 
+```jsx
+ getMovies = async () => {
+        const {
+            data: {
+                data: {movies},
+            },
+        } = await axios.get('https://yts-proxy.now.sh/list_movies.json');
+        console.log(movies)
+    }
+```
++ getMovies()에 async 붙임, axios.get()에 await 붙임
++ async는 js에게 getMovies() 함수가 비동기라고 알려줌
++ await는 getMovies()함수 내부의 axios.get()의 실행 완료를       기다렸다가 끝나고 진행하라고 알려줌
+
 
 # 강현준 201840203
 ## [09월29일]
