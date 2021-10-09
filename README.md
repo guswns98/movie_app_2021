@@ -37,11 +37,11 @@ export default App
 ```jsx
 import axios from "axios"
 ```
-<<<<<<< HEAD
+
 + axios로 API 호출
   - axios 동작확인 
   - ![12](https://user-images.githubusercontent.com/79896103/136647370-1c70ca02-184f-4c66-8b63-ece0270b0605.PNG)
->>>>>>> 7e56a0312a4f49e7e08b3d4a171ccaeedb721af9
+
 ### 3. async 
 ```jsx
  getMovies = async () => {
