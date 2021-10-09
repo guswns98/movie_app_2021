@@ -1,4 +1,44 @@
 # 강현준 201840203
+## [10월6일]
+### 1. 로딩상태/로딩현상
+
+```jsx
+import React from "react"
+
+class App extends React.Component {
+    state = {
+        isLoading: true,
+        movies: []
+    }
+    componentDidMount(){
+      setTimeOut(()=>{
+        this.setState({isLoading:false})
+      },5000)
+    }
+
+    render() {
+        const { isLoading } = this.state
+        return (
+            <div>
+                { isLoading ? 'Loading...' : '영화 데이터 출력' }
+            </div>
+        )
+    }
+}
+export default App
+```
+
++ 삼항연산자 사용해 isLoading true이면 Loading 출력 아니면 false출력 
++ setTimeout() 함수를 이용해 5초후에 데이터 출력
+### 2. axios 
++ axios 설치
+  - npm install axios
++ axios import 추가 
+```jsx
+import axios from "axios"
+```
+
+# 강현준 201840203
 ## [09월29일]
 ### 1. prop types
 + prop types 설치
