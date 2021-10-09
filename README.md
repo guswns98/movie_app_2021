@@ -30,16 +30,19 @@ export default App
 
 + 삼항연산자 사용해 isLoading true이면 Loading 출력 아니면 false출력 
 + setTimeout() 함수를 이용해 5초후에 데이터 출력
+
 ### 2. axios 
 + axios 설치
   - npm install axios
 + axios import 추가 
+
 ```jsx
 import axios from "axios"
 ```
-<<<<<<< HEAD
+
 + axios로 API 호출
-  - axios 동작확인 
+  - axios 동작확인
+  ![12](https://user-images.githubusercontent.com/79896103/136647370-1c70ca02-184f-4c66-8b63-ece0270b0605.PNG)
 ### 3. async 
 ```jsx
  getMovies = async () => {
@@ -54,9 +57,9 @@ import axios from "axios"
 + getMovies()에 async 붙임, axios.get()에 await 붙임
 + async는 js에게 getMovies() 함수가 비동기라고 알려줌
 + await는 getMovies()함수 내부의 axios.get()의 실행 완료를       기다렸다가 끝나고 진행하라고 알려줌
-=======
-![12](https://user-images.githubusercontent.com/79896103/136647370-1c70ca02-184f-4c66-8b63-ece0270b0605.PNG)
->>>>>>> 7e56a0312a4f49e7e08b3d4a171ccaeedb721af9
+
+
+
 
 
 # 강현준 201840203
