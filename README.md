@@ -1,6 +1,90 @@
 # 강현준 201840203
 ## [10월13일]
-### 1.
+### 1. Movie.prop-type 컴포넌트 만들기 
+
+```jsx
+import PropTypes from 'prop-types'
+
+      function Movie({id,title,year,summary,poster}) {
+          return (
+              <h1>{title}</h1>
+          ) 
+      }
+      
+      Movie.propTypes = {
+          id: PropTypes.number.isRequired, // 자료형 number, 반드시 있어야하는 id
+          year: PropTypes.number.isRequired,
+          title: PropTypes.string.isRequired, // 자료형 string
+          summary: PropTypes.string.isRequired,
+          poster: PropTypes.string.isRequired
+      }
+      
+      export default Movie;
+```
+### 2. 영화 데이터 정렬
+```jsx
+await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating') 
+```
++ sort_by 사용해 평점을 내림차순으로 정렬 
+
+
+### 3. movies.map() 사용
+```jsx
+    render() {
+        const { isLoading, movies } = this.state
+        return (
+            <section className="container">
+                { isLoading ? (
+                    <div className="loader">
+                        <span className="loader-text">Loading...</span>
+                    </div>
+                    ) : (
+                        <div className="movies">
+                        {movies.map((movie) => (
+                    <Movie 
+                        key={movie.id}
+                        id={movie.id}
+                        year={movie.year}
+                        title={movie.title}
+                        summary={movie.summary}
+                        poster={movie.medium_cover_image}
+                        genres={movie.genres}
+                    />
+                ))}
+                </div>
+                )}
+            </section>
+        )
+    }
+```
++ this.state에 있는 movie를 얻어 App 컴포넌트에 movies.map()사용 
+
+
+### 4. image를 string으로 작성하는 이유 
+```jsx
+ poster={movie.medium_cover_image}
+```
++ url 주소 들어가기 때문에 movies.poster라고 작성하면 안됨
+
+
+### 5. Movie 컴포넌트에 영화 이미지 추가 
+```jsx
+function Movie({title,year,summary,poster, genres}) {
+    return (
+        <div className="movie">
+            <img src={poster} alt={title} title={title} />
+            <div className="movie-data">
+                <h3 className="movie-title">{title}</h3>
+                <h5 className="movie-year">{year}</h5>
+                <p className="movie-summary">{summary}</p>
+            </div>  
+        </div>
+    ) 
+}
+```
+
+
+
 # 강현준 201840203
 ## [10월6일]
 ### 1. 로딩상태/로딩현상
