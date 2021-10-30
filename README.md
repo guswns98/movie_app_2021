@@ -1,4 +1,61 @@
 # 강현준 201840203
+## [10월 27일]
+### 1. 영화 장르 출력
++ map 함수 사용 
+```jsx
+<h5 className="movie-year">
+<ul className="movie-genres">
+    {genres.map((genre)=> {
+    return <li className="movie-genre">{genre}</li>;
+    })}
+</ul>
+```
++ 시놉시스 180자 제한
+```jsx
+<p className="movie-summary">{summary.slice(0,180)}...</p>
+```
++ summary 프롭스에 문자열 180자 제한
+  - {문자열.slice(시작,끝)}
+### 2. react router dom 설치
++ npm install react-router-dom
+### 3. 라우터 사용
++ HashRouter , Route 사용
+```jsx
+import "./App.css"
+import { HashRouter , Route} from 'react-router-dom'
+import About from './routes/About'
+import Home from "./routes/Home"
+
+function App(){
+    return(
+         <HashRouter>
+            <Route path='/' component={Home} />
+            <Route path='/about' component={About} />
+        </HashRouter>
+    )
+}
+``` 
++ Home 컴포넌트를 위한 Route 컴포넌트 추가
++ about.js 수정 
+```jsx
+import React from 'react';
+import './About.css'
+
+function About() {
+    return(
+        <div className="about-container">
+            <span>
+                "Freedom is the freedom to say that two plus two make four. If that is granted, all else follows"
+            </span>
+            <span>- George Orwell, 1984</span>
+        </div>
+    );
+}
+export default About;
+```
+
+
+# 강현준 201840203
 ## [10월13일]
 ### 1. Movie.prop-type 컴포넌트 만들기 
 
