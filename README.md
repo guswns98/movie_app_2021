@@ -1,4 +1,42 @@
 # 강현준 201840203
+## [11월 3일]
+### 1. Navigation component 만들기
+```jsx
+import React from 'react';
+
+function Navigation() {
+    return(
+        <div>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </div>
+    )
+}
+export default Navigation;
+```
++ Link 엘리먼트로 바꾸기
+```jsx
+import { Link } from 'react-router-dom';
+
+function Navigation() {
+    return(
+        <div>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+        </div>
+    )
+}
+```
++ navigtion css 파일 생성 후 navigation.js에 임포트
+
+### 2. 영화 상세정보 기능 만들기 
+
+
+
+
+
+
+# 강현준 201840203
 ## [10월 27일]
 ### 1. 영화 장르 출력
 + map 함수 사용 
