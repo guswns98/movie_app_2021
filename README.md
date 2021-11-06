@@ -30,6 +30,42 @@ function Navigation() {
 + navigtion css 파일 생성 후 navigation.js에 임포트
 
 ### 2. 영화 상세정보 기능 만들기 
++ route props에 데이터 보내기
+```jsx
+            <Link
+                to= {{
+                    pathname: 'movie-detail',
+                    state: { year, title, summary, poster, genres }
+                }}
+            >
+```
+
++  Detail.js 생성
+```jsx
+function Detail(props){
+    console.log(props)
+    return (
+    <span>haha</span>
+    )
+}
+export default Detail;
+```
++  App.js에 detail 컴포넌트를 임포트, route 컴포넌트에서 detail 컴포넌트를 그리도록 수정
+```jsx
+//App.js
+import Detail from './routes/Detail';
+<Route path="/movie-detail" component={Detail}>
+```
+### 3. 리다이렉트 기능
++ 영화 콘솔 텝 열면 history에 출력된 값 push,go,goBack,goForward키 -> URL 변경 
++ 영화 제목 출력
+```jsx
+//Detail.js
+render() {
+  const { location } = this.props;
+  return <span>{location.state.title}</span>
+}
+```
 
 
 
