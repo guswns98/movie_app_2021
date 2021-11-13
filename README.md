@@ -13,9 +13,51 @@
   ```
   + npm install gh-pages 설치 
   + npm run deploy - 배포 명령어 
-  
+  + 배포 명령어 실행후 build 파일 생성됨 
+    - build 파일 속 index.html로 실행 가능
+### 2. timer 컴포넌트 
+```jsx
+<script type="text/babel">
+class Timer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { seconds: 0 };
+  }
 
+  tick() {
+    this.setState(state => ({
+      seconds: state.seconds + 1
+    }));
+  }
 
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    return (
+      <div>
+        Seconds: {this.state.seconds}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Timer />,
+  document.getElementById('timer-example')
+);
+    </script>
+</head>
+<body>
+<div id="timer-example"></div>    
+</body>
+</html>
+```
 
 
 
