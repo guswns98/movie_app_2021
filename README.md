@@ -1,3 +1,24 @@
+# 강현준 201840203 
+## [11월 10일]
+### 1.배포
++ package.json 수정
+```jsx
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    //추가
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },"homepage": "https://guswns98.github.io/movie_app_2021"//추가
+  ```
+  + npm install gh-pages 설치 
+  + npm run deploy - 배포 명령어 
+  
+
+
+
+
+
 # 강현준 201840203
 ## [11월 3일]
 ### 1. Navigation component 만들기
