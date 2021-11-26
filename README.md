@@ -1,4 +1,27 @@
 # 강현준 201840203
+## [11월 24일]
+### 1. JSX
++ js + html
+```jsx
+const element = <h1>Hello, world!</h1>;
+```
++ jsx 자식 
+  - div 태그로 감싸줘야함
+  ```jsx
+  const element = (
+  <div>
+    <h1>Hello!m world!</h1>
+  </div>
+  );
+  ```
+### 2. 컴포넌트
++ 데이터를 입력받아 DOM Node를 출력하는 함수. 이때 입력받는 데이터는 props나 state같은것들
+
+
+
+
+
+# 강현준 201840203
 ## [11월 17일]
 ### 1. Remarkable
 + 설치 - npm install remarkable
