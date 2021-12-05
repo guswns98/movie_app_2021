@@ -1,3 +1,54 @@
+# 강현주 201840203  
+## [12월 1일]
+### 1. Clock 컴포넌트
+
+```jsx
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
+```
+
+### 2. 조건부 렌더링
++ 조건부 렌더링은 특정 조건이 참인지 거짓인지에 따라 다른 결과를 보여주고 싶을 때 사용.
+
+
+
+
+
 # 강현준 201840203
 ## [11월 24일]
 ### 1. JSX
